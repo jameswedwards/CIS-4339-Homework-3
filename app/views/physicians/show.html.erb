@@ -36,10 +36,12 @@
             <th>Patient Name</th>
             <th>Date of Appointment</th>
           </tr>
+          <% @physician.appointments.each do |appointment| %>
           <tr>
-            <td></td>
-            <td></td>
+            <td><%= appointment.patient.name %></td>
+            <td><%= appointment.visit.strftime("%B %e, %Y %R") %></td>
           </tr>
+          <% end %>
         </tbody>
       </table>
 </div>
