@@ -14,7 +14,7 @@
  *= require_self
  */
  .header {
-   border: 15px;
-   background-color: #a8a8a8;
-   padding: 5px;
+   padding:10px;
+   background-color:lightgray;
+   border:1px solid black
  }

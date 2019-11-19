@@ -62,13 +62,14 @@ class PhysiciansController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to s  <tbody>  <tbody>hare common setup or constraints between actions.
     def set_physician
       @physician = Physician.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def physician_params
-      params.require(:physician).permit(:name, :specialty, offices_attributes: [:id, :address, :zip, :phone, :_destroy])
+      params.require(:physician).permit(:name, :specialty, offices_attributes: [:id, :address, :zip, :phone, :_destroy],
+        appointments_attributes: [:id, :visit, :physician_id, :patient_id, :_destroy])
     end
 end
